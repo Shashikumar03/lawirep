@@ -59,7 +59,7 @@ root {
 
 .moving-text-para{
   /* border: 2px solid red; */
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   background-image: linear-gradient(45deg, #29cc4d 30%, #1c127b 90%);
  -webkit-background-clip: text;
