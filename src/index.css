@@ -1,0 +1,81 @@
+root {
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue: hsl(207, 26%, 17%);
+  --very-dark-blue-light-mode: hsl(200, 15%, 8%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+}
+
+.flight-container {
+  position: relative;
+  width: 100%;
+  height: 100px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.flight {
+  position: absolute;
+  top: 50%;
+  left: -100px; /* Initial position off-screen */
+  animation: flyRight 5s linear infinite; /* Adjust animation duration and timing function as needed */
+}
+
+@keyframes flyRight {
+  from {
+    transform: translateX(-100px); /* Start position */
+  }
+  to {
+    transform: translateX(calc(100% + 100px)); /* End position */
+  }
+}
+/* moving text css */
+.text-container {
+  overflow: hidden; /* Hide overflow to prevent text from displaying outside container */
+}
+
+.moving-text {
+  animation: moveRight 30s linear infinite; /* Animation duration, timing function, and repetition */
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-100%);/
+  }
+  to {
+    transform: translateX(100%); 
+  }
+}
+
+.moving-text-para{
+  /* border: 2px solid red; */
+  font-size: 3rem;
+  text-align: center;
+  background-image: linear-gradient(45deg, #29cc4d 30%, #1c127b 90%);
+ -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
+}
+
+.train,.plain{
+  cursor: pointer;
+}
+.train:hover,.plain:hover{
+  color: rgb(56, 54, 120);
+}
+
+.card-icon{
+  display: flex;
+  gap: 1rem;
+}
