@@ -12,6 +12,7 @@ import flight from "../assets/flight.gif";
 import FlightAnimation from "./FlightAnimation ";
 import ConnectingAirportsIcon from "@mui/icons-material/ConnectingAirports";
 import TrainTwoToneIcon from "@mui/icons-material/TrainTwoTone";
+import { Link } from "react-router-dom";
 
 function Appbar() {
   return (
@@ -37,15 +38,20 @@ function Appbar() {
               component="div"
               sx={{ flexGrow: 1 }}
             >
-              <ConnectingAirportsIcon
-                sx={{ fontSize: 50, height: 50 }}
-                className="plain"
-              />
-              <TrainTwoToneIcon
-                color="primary"
-                sx={{ fontSize: 50, height: 50 }}
-                className="train"
-              />
+              <Link to={`/flight`} key="1">
+                <ConnectingAirportsIcon
+                  sx={{ fontSize: 50, height: 50 }}
+                  className="plain"
+                />
+              </Link>
+
+              <Link to={`/train`} key="1">
+                <TrainTwoToneIcon
+                  color="primary"
+                  sx={{ fontSize: 50, height: 50 }}
+                  className="train"
+                />
+              </Link>
             </Typography>
 
             <Button color="inherit">Login</Button>
